@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: Inter, sans-serif;
     background-color: #FAFAF8;
+    
 }
 
 header {
@@ -62,3 +63,12 @@ main {
     content: "+";
     margin-right: 5px;
 }
+
+.add-ingredient-form > button:hover{
+    cursor: pointer;
+    opacity: 75%;
+}
+.add-ingredient-form > button{}
+
+
+    
