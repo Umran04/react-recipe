@@ -16,6 +16,7 @@ export default function Main() {
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
         addNewIngredients(newIngredient)
+        event.target.reset()
 
     }
 

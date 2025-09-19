@@ -66,9 +66,13 @@ main {
 
 .add-ingredient-form > button:hover{
     cursor: pointer;
-    opacity: 75%;
+    
 }
-.add-ingredient-form > button{}
+.add-ingredient-form > button:active{
+    background-color: black;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 
     
