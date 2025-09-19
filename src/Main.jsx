@@ -17,7 +17,7 @@ export default function Main() {
         const newIngredient = formData.get("ingredient")
         addNewIngredients(newIngredient)
         event.target.reset()
-
+        //FOLLOW ON FROM NEXT SCRIM
     }
 
     
