@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Main() {
+    //MOVE THESE INTO DIFFERENT FILES FOR READABILITY
 
     const [ingredients, setIngredients] = React.useState(['all the main spices', 'tomato', 'beef', 'pasta'])
     function addNewIngredients(newIngredient){
