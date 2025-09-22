@@ -69,7 +69,7 @@ main {
     
 }
 .add-ingredient-form > button:active{
-    background-color: black;
+    background-color: #141413;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
