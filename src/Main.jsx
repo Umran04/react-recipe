@@ -16,23 +16,25 @@ export default function Main() {
         const newIngredient = formData.get("ingredient")
         addNewIngredients(newIngredient)
         
-        //FOLLOW ON FROM NEXT SCRIM
+        
     }
 
     
     return (
         <main>
-            <form action={handleSubmit} className="add-ingredient-form">
-                <input 
-                    type="text"
-                    placeholder="e.g. oregano"
-                    aria-label="Add ingredient"
-                    name="ingredient"
-                />
-                <button>Add ingredient</button>
-                
-            </form>
-            <ul>{ingredientsList}</ul>
+            <div className='main-content'>
+                <form action={handleSubmit} className="add-ingredient-form">
+                    <input 
+                        type="text"
+                        placeholder="e.g. oregano"
+                        aria-label="Add ingredient"
+                        name="ingredient"
+                    />
+                    <button>Add ingredient</button>
+                    
+                </form>
+                <ul>{ingredientsList}</ul>
+            </div>
         </main>
     )
 }
