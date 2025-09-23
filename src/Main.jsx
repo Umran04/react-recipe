@@ -1,5 +1,6 @@
 import React from 'react'
 import AIRecipe from './AIRecipe'
+import IngredientsList from './IngredientsList'
 
 export default function Main() {
     //MOVE THESE INTO DIFFERENT FILES FOR READABILITY
@@ -14,7 +15,7 @@ export default function Main() {
 
     const [recipeShown,setRecipeShown] = React.useState(false)
 
-    function recipeBtn(){
+    function toggleShown(){
         setRecipeShown(prevShown => !prevShown)
     }
 
@@ -42,18 +43,13 @@ export default function Main() {
                     <button>Add ingredient</button>
                     
                 </form>
-               {ingredients.length > 0 && 
-                <section className='section1'>
-                    <h2>Ingredients on hand:</h2>
-                    <ul className="ingredients-list" aria-live="polite">{ingredientsList}</ul>
-                    {ingredients.length > 2 && <div className="get-recipe-container">
-                        <div>
-                            <h3>Ready for a recipe?</h3>
-                            <p>Generate a recipe from your list of ingredients.</p>
-                        </div>
-                        <button onClick={recipeBtn}>Get a recipe</button>
-                    </div>}
-                </section>}
+               {ingredients.length > 0 &&
+                <IngredientsList
+                toggleShown={toggleShown}
+                ingredientsList={ingredientsList}
+                length={ingredients.length}
+                
+                />}
                 {recipeShown && <AIRecipe /> }
             </div>
         </main>
