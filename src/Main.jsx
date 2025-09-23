@@ -1,11 +1,9 @@
 import React from 'react'
 import AIRecipe from './components/AIRecipe'
 import IngredientsList from './components/IngredientsList'
-import { getRecipeFromMistral } from './ai'
-
 
 export default function Main() {
-    
+    //MOVE THESE INTO DIFFERENT FILES FOR READABILITY
 
     const [ingredients, setIngredients] = React.useState(['all the main spices', 'tomato', 'beef', 'pasta'])
     function addNewIngredients(newIngredient){
@@ -15,20 +13,10 @@ export default function Main() {
         <li key={ingredient}>{ingredient}</li>
     ))
 
-    //const [generatedRecipe,setGeneratedRecipe] = React.useState('')
-    const [recipeShown,setRecipe] = React.useState(false)
+    const [recipeShown,setRecipeShown] = React.useState(false)
 
-    // async function toggleRecipeShown(){
-    //     setRecipe(prevShown => !prevShown)
-
-    //     if(!recipeShown){
-    //         const recipe = await getRecipeFromMistral(ingredients)
-    //         setGeneratedRecipe(recipe)
-    //     }
-    // }
-
-    function toggleRecipeShown(){
-        setRecipe(prevShown => !prevShown)
+    function toggleShown(){
+        setRecipeShown(prevShown => !prevShown)
     }
 
 
@@ -57,8 +45,8 @@ export default function Main() {
                 </form>
                {ingredients.length > 0 &&
                 <IngredientsList
-                toggleRecipeShown={toggleRecipeShown}
-                ingredients={ingredients}
+                toggleShown={toggleShown}
+                ingredientsList={ingredientsList}
                 length={ingredients.length}
                 
                 />}
