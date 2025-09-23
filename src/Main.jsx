@@ -2,8 +2,10 @@ import React from 'react'
 import AIRecipe from './AIRecipe'
 import IngredientsList from './IngredientsList'
 
+
+
 export default function Main() {
-    //MOVE THESE INTO DIFFERENT FILES FOR READABILITY
+    
 
     const [ingredients, setIngredients] = React.useState(['all the main spices', 'tomato', 'beef', 'pasta'])
     function addNewIngredients(newIngredient){
@@ -13,10 +15,13 @@ export default function Main() {
         <li key={ingredient}>{ingredient}</li>
     ))
 
-    const [recipeShown,setRecipeShown] = React.useState(false)
+    
+    const [recipeShown,setRecipe] = React.useState(false)
 
-    function toggleShown(){
-        setRecipeShown(prevShown => !prevShown)
+   
+
+    function toggleRecipeShown(){
+        setRecipe(prevShown => !prevShown)
     }
 
 
@@ -45,8 +50,8 @@ export default function Main() {
                 </form>
                {ingredients.length > 0 &&
                 <IngredientsList
-                toggleShown={toggleShown}
-                ingredientsList={ingredientsList}
+                toggleRecipeShown={toggleRecipeShown}
+                ingredients={ingredientsList}
                 length={ingredients.length}
                 
                 />}
@@ -55,3 +60,5 @@ export default function Main() {
         </main>
     )
 }
+
+////STOPPING THE PROJ HERE -> AI BREAKS EVERYTHING
