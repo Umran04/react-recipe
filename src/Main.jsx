@@ -1,6 +1,6 @@
 import React from 'react'
-import AIRecipe from './components/AIRecipe'
-import IngredientsList from './components/IngredientsList'
+import AIRecipe from './AIRecipe'
+import IngredientsList from './IngredientsList'
 
 export default function Main() {
     //MOVE THESE INTO DIFFERENT FILES FOR READABILITY
